@@ -25,9 +25,9 @@ client.get_me()
 # api = tweepy.API(authenticator, wait_on_rate_limit=True)
 
 
-# client.create_tweet(text="Hello World!") first tweet
-# client.follow_user('1666587121') follow personal account
-# client.follow_user('918556551408947200') follows @CloneHero
+# client.create_tweet(text="Hello World!") -- first tweet
+# client.follow_user('1666587121') -- follow personal account
+# client.follow_user('918556551408947200') -- follow @CloneHero
 
 
 # retrieves the JSON of the "latest" song section from the site
@@ -88,8 +88,6 @@ for song in song_dict['songs']:
                 elif instrument == 'keys':
                     keys_diff_list = list(song['noteCounts'][instrument].keys())
                     keys_diff_str = "\nKeys: " + ",".join(keys_diff_list).upper()
-        # client.create_tweet(text='NEW CHART: ' + song['name'] + '[' + song['length'] + ']\n'
-                            # + 'Artist: ' + song['artist'])
 
         original_tweet = client.create_tweet(text=song['name'] + ' [' + song_length + ']\n' + 'ARTIST: '
               + song['artist'] + '\n\n' + 'ALBUM: ' + song['album'] + ' (' + str(song['year']) + ')\n'
@@ -97,6 +95,5 @@ for song in song_dict['songs']:
         thread_tweet_one = client.create_tweet(text='DIFFICULTIES:' + guitar_diff_str + bass_diff_str
                                                     + drums_diff_str + rhythm_diff_str + keys_diff_str,
                                                in_reply_to_tweet_id=original_tweet.data['id'])
-        #  print(str(datetime.timedelta(seconds=song['length'], hours=0)))
 
 
