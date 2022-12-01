@@ -20,9 +20,6 @@ bearer_token = keys[4]
 client = tweepy.Client(bearer_token=bearer_token, consumer_key=consumer_key, consumer_secret=consumer_key_secret,
                        access_token=access_token, access_token_secret=access_token_secret)
 client.get_me()
-# authenticator = tweepy.OAuthHandler(api_key, api_key_secret)
-# authenticator.set_access_token(access_token, access_token_secret)
-# api = tweepy.API(authenticator, wait_on_rate_limit=True)
 
 
 # client.create_tweet(text="Hello World!") -- first tweet
