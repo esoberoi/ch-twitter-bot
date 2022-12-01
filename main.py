@@ -46,7 +46,7 @@ for song in song_dict['songs']:
     # genre: ###
     # charter: ###
 
-    # REPLY TWEET SHOULD INCLUDE (each instrument should say N/A if the chart does not include it)
+    # REPLY TWEET SHOULD INCLUDE (only include instruments if applicable)
     # Difficulties:
     # Guitar: N/A / difficulties (easy, medium, hard, expert)
     # Bass: N/A / difficulties (easy, medium, hard, expert)
