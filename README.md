@@ -12,19 +12,19 @@ Firstly, I needed to authenticate my project with the Twitter developer account 
 
 I used the API of the Recent section on the Chorus website (can be seen on the homepage) as a dictionary to draw my data from. The dictionary is parsed for details I deemed important, formatted into a tweet and a reply to the original tweet. 
 
-ORIGINAL TWEET SHOULD INCLUDE:
-    NEW CHART: name [length]
-    artist: ###
-    album: ### (year)
-    genre: ###
-    charter: ###
+ORIGINAL TWEET SHOULD INCLUDE:\n
+    NEW CHART: name [length]\n
+    artist: ###\n
+    album: ### (year)\n
+    genre: ###\n
+    charter: ###\n
 
-REPLY TWEET SHOULD INCLUDE (only include difficulties of each instrument if the instrument and/or its difficulties exists in the chart)
-    Difficulties (E = Easy, M = Medium, H = Hard, X = expert):
-    Guitar: N/A or E, H, M, X
-    Bass: N/A or E, H, M, X
-    Drums: N/A or E, H, M, X
-    Rhythm Guitar: N/A or E, H, M, X
-    Keys: N/A or E, H, M, X
+REPLY TWEET SHOULD INCLUDE (only include difficulties of each instrument if the instrument and/or its difficulties exists in the chart)\n
+    Difficulties (E = Easy, M = Medium, H = Hard, X = expert):\n
+    Guitar: N/A or E, H, M, X\n
+    Bass: N/A or E, H, M, X\n
+    Drums: N/A or E, H, M, X\n
+    Rhythm Guitar: N/A or E, H, M, X\n
+    Keys: N/A or E, H, M, X\n
     
 As of December 1, 2022, the bot is in its testing phase regarding hosting it on a server and reliable operation. The bot should update daily at 1 AM EST.
