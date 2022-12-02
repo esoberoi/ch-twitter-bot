@@ -30,27 +30,12 @@ client.get_me()
 # retrieves the JSON of the "latest" song section from the site
 song_dict = requests.get('https://chorus.fightthe.pw/api/latest').json()
 
-# print(type(song_dict))
 name_list = []
 
 last_24_hours = datetime.datetime.now() - datetime.timedelta(days=1)
 for song in song_dict['songs']:
-    # name_list.append(song['name'])
-    # ORIGINAL TWEET SHOULD INCLUDE:
-    # NEW CHART: name [length]
-    # artist: ###
-    # album: ### (year)
-    # genre: ###
-    # charter: ###
 
-    # REPLY TWEET SHOULD INCLUDE (only include instruments if applicable)
-    # Difficulties:
-    # Guitar: N/A / difficulties (easy, medium, hard, expert)
-    # Bass: N/A / difficulties (easy, medium, hard, expert)
-    # Drums: N/A / difficulties (easy, medium, hard, expert)
-    # Rhythm Guitar: N/A / difficulties (easy, medium, hard, expert)
-    # Keys: N/A / difficulties (easy, medium, hard, expert)
-
+    #if chart was released in the last 24 hours
     if parser.isoparse(song['uploadedAt']).timestamp() >= last_24_hours.timestamp():
         m, s = divmod(song['length'], 60)
         guitar_diff_list = []
@@ -70,6 +55,7 @@ for song in song_dict['songs']:
             elif song[item] is None:
                 song[item] = 'N/A'
             for instrument in song['noteCounts']:
+            #only add instrument difficulties if instrument exists in chart
                 if instrument == 'guitar':
                     guitar_diff_list = list(song['noteCounts'][instrument].keys())
                     guitar_diff_str = "\nGuitar: " + ",".join(guitar_diff_list).upper()
@@ -92,5 +78,5 @@ for song in song_dict['songs']:
         thread_tweet_one = client.create_tweet(text='DIFFICULTIES:' + guitar_diff_str + bass_diff_str
                                                     + drums_diff_str + rhythm_diff_str + keys_diff_str,
                                                in_reply_to_tweet_id=original_tweet.data['id'])
-
+        # thread_tweet_one replies to the original tweet with difficulties
 
