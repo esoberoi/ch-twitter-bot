@@ -1,5 +1,6 @@
 # ch-twitter-bot
 A Twitter Bot that automates tweets based on the release of new Clone Hero charts from the Chorus Repository.
+https://twitter.com/CHsongbot
 
 OVERVIEW:
 Clone Hero is a free popular fan-made clone of the Guitar Hero video game franchise. The clone allows players to download charts (maps of notes to play) and play along to songs on their PC with guitar, drum, and key controllers that they may own. These charts are designed to be freely and widely available, with a few major repositories and spreadsheets where thousands of song charts can be downloaded. Perhaps the biggest (single) source of charts is the Chorus repository (https://chorus.fightthe.pw/), where users, with permission from admins, can upload their custom-made charts for other users to install and add to their Clone Hero songs folder.
