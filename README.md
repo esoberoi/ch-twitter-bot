@@ -28,4 +28,4 @@ REPLY TWEET SHOULD INCLUDE (only include difficulties of each instrument if the 
     Rhythm Guitar: N/A or E, H, M, X
     Keys: N/A or E, H, M, X
     
-As of December 1, 2022, the bot is in its testing phase regarding hosting it on a server and reliable operation. The bot should update daily at 1 AM EST.
+UPDATE: As of December 5, 2022, the bot is in its Beta phase. The script runs at 1:06 AM EST daily.
